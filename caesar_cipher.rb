@@ -1,4 +1,3 @@
-require 'pry-byebug'
 def caesar_cipher(string, shift_factor)
   #shifts each letter in string a number of places down the alphabet equal to shift_factor. For example,
   #caesar_cipher("caesar", 2) should return "ecguct"
@@ -22,8 +21,5 @@ def caesar_cipher(string, shift_factor)
       letter
     end
   end
-  #binding.pry
   letters.join
 end
-
-puts caesar_cipher("What about a whole sentence?", 5)
