@@ -6,10 +6,12 @@ def caesar_cipher(string, shift_factor)
   letters = string.split('')
   letters.map! do |letter|
     letter_index = alphabet.find_index(letter)
-    letter = alphabet[letter_index + shift_factor]
+    shift_check = letter_index + shift_factor
+    shift_check -= 26 if shift_check > 26
+    letter = alphabet[shift_check]
   end
-  binding.pry
+  #binding.pry
   letters.join
 end
 
-puts caesar_cipher("caesar", 2)
+puts caesar_cipher("zebra", 2)
